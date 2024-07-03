@@ -17,25 +17,23 @@ This project is a simple Node.js application to provide a simple API for managin
    cd project-directory
 
 2.	Install Node.js dependencies:
+
     ```sh
     npm install
 
 3.	Initialize Terraform:
+
     ```sh
     terraform init
 
 ### Usage
 1.	Running the Application:
+
     ```sh
     npm build
 
-### Deploying Infrastructure
-1.	Apply the Terraform configuration:
-   ```sh
-    terraform apply
 
-### Deploying Infrastructure
-1.	Apply the Terraform configuration:
+## Directory and File Descriptions
 
 1.	**project-directory/dist/**: The npm build command will compile the TypeScript code and create the dist/ directory along with the compiled JavaScript code.
     -	dist/controllers/todoController.js: This is a controller file which contains multiple controller functions.
