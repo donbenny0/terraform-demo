@@ -97,7 +97,7 @@ This project is a simple Node.js application to provide a simple API for managin
         lambda_invoke_arn: - Invocation ARN of the Lambda function
 
 - c.	Using lambda module in project-directory/main.tf
-    ```sh
+    ```
             module "lambda" {
             source = "./modules/lambda"
             function_name         = "my_lambda_function"
