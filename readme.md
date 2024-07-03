@@ -77,3 +77,34 @@ This project is a simple Node.js application to provide a simple API for managin
 	-   **variables.tf**: Terraform variables file for defining input variables.
 
 
+### Configuring Deployment
+1.	**Module – lambda**
+    **Overview**
+    This Terraform module prepares, packages, and deploys an AWS Lambda function. It consists of three main components:
+    -	Preparing the Lambda function: Running build commands and installing dependencies.
+    -	Creating a ZIP file: Packaging the Lambda function and its dependencies into a .zip file.
+    -	Deploying the Lambda function: Uploading the .zip file to AWS Lambda.
+a.	Input Variables
+function_name: - Name of the Lambda function
+lambda_role_arn: - ARN of the IAM role for Lambda
+handler: - Handler for the Lambda function
+runtime: - Runtime for the Lambda function
+environment_variables: - Environment variables for the Lambda function
+b.	Output Variables
+lambda_function_name: - Name of the Lambda function
+lambda_invoke_arn: - Invocation ARN of the Lambda function
+c.	Using lambda module in project-directory/main.tf
+
+module "lambda" {
+  source = "./modules/lambda"
+  function_name         = "my_lambda_function"
+  lambda_role_arn       = // specify the arn
+  handler               = "index.handler"
+  runtime               = "nodejs14.x"
+  environment_variables = {
+    "KEY1" = "value1"
+    "KEY2" = "value2"
+  }
+}
+
+
