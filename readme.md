@@ -181,7 +181,7 @@ c.	Using s3 module in project-directory/main.tf
         delete_todo_arn  = "specify arn here"
         }
 
-4.	Module – iam
+4.	**Module – iam**
 a.	Input variables
 s3_bucket_arn: ARN of the S3 bucket
 b.	Output variables
@@ -192,5 +192,3 @@ module "iam" {
   source        = "Path to module"
   s3_bucket_arn = //specify arn of bucket
 }
-
-
