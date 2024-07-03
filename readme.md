@@ -171,7 +171,7 @@ This module defines the s3 bucket and file upload to the bucket
 c.	Using s3 module in project-directory/main.tf
 
     ```hcl
-        module "api_gateway" {
+    module "api_gateway" {
         source           = "Path to module"
         api_name         = "Api Name goes here"
         api_description  = "description goes here"
@@ -179,16 +179,18 @@ c.	Using s3 module in project-directory/main.tf
         add_todo_arn     = "specify arn here"
         update_todo_arn  = "specify arn here"
         delete_todo_arn  = "specify arn here"
-        }
+    }
 
 4.	**Module – iam**
-a.	Input variables
-s3_bucket_arn: ARN of the S3 bucket
-b.	Output variables
-lambda_role_arn: ARN of the IAM role for Lambda
-c.	Usage
+- a.	Input variables
+    ```> s3_bucket_arn: ARN of the S3 bucket
+- b.	Output variables
+    ```> lambda_role_arn: ARN of the IAM role for Lambda
+- c.	Usage
 
-module "iam" {
-  source        = "Path to module"
-  s3_bucket_arn = //specify arn of bucket
-}
+    ```hcl
+        module "iam" {
+          source        = "Path to module"
+          s3_bucket_arn = //specify arn of bucket
+        }
+    
