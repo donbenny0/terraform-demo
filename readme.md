@@ -199,7 +199,7 @@ c.	Using s3 module in project-directory/main.tf
 - 1.	project-destination/src/dto/dto.ts
 
     - a.	Creating new dto structure
-    
+
         ```hcl
             export interface New_dto{
 
@@ -207,7 +207,8 @@ c.	Using s3 module in project-directory/main.tf
             }
 - 2.	project-destination/src/conreoller/todoController.ts
 
-     a.	Creating new controller
+     - a.	Creating new controller
+
         ```hcl
         import { TodoService } from '../service/service';
         import { Todo } from '../dto/todoModel';
@@ -264,4 +265,4 @@ c.	Using s3 module in project-directory/main.tf
 ## Cleaning Up
 - To remove all deployed resources, navigate to the terraform directory and run:
 
-    ```terraform destroy
+```terraform destroy
