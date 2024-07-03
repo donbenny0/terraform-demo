@@ -199,6 +199,7 @@ c.	Using s3 module in project-directory/main.tf
 - 1.	project-destination/src/dto/dto.ts
 
     - a.	Creating new dto structure
+    
         ```hcl
             export interface New_dto{
 
@@ -206,7 +207,7 @@ c.	Using s3 module in project-directory/main.tf
             }
 - 2.	project-destination/src/conreoller/todoController.ts
 
-    - a.	Creating new controller
+     a.	Creating new controller
         ```hcl
         import { TodoService } from '../service/service';
         import { Todo } from '../dto/todoModel';
@@ -225,28 +226,42 @@ c.	Using s3 module in project-directory/main.tf
         }
  
 - 3.	project-destination/src/service/service.ts
-    - a.	Creating new service
+     a.	Creating new service
         ```hcl
             import { S3Client, GetObjectCommand, PutObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
             import { Todo } from '../dto/todoModel';
+           
             // Specify other imports here
-            export class TodoService {
+           
+           export class TodoService {
+                
                 // create private variables here
-                    // create private variables here
-                constructor() {
-            //Add initilaization here
-                }
+                // create private variables here
+                
+                    constructor() {
+                
+                        //Add initilaization here
+                
+                    }
+                
                 // Helper method to get the current list of Todos
+                
                 private async getTodos(): Promise<Todo[]> {
-            	//Write todo logic here
-                }
-                }
-            // Write more methods
+
+            	        //Write todo logic here
+                    
+                    }
+            }
+
+           // Write more methods
+
                 public async createTodo(todo: Todo): Promise<void> {
-            //access todo here
+
+                    //access todo here
                 }
         }
+
 ## Cleaning Up
-    - To remove all deployed resources, navigate to the terraform directory and run:
-    
+- To remove all deployed resources, navigate to the terraform directory and run:
+
     ```terraform destroy
