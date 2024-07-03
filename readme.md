@@ -130,18 +130,18 @@ Todo Resource
 
 - a.	Input variables
     ```> api_name: Name of the API Gateway
-    ```> api_description: Description of the API Gateway
-    ```> get_todos_arn: ARN of the Lambda function for getting to-do
-    ```> add_todo_arn: ARN of the Lambda function for adding a to-do
-    ```> update_todo_arn: ARN of the Lambda function for updating a to-do
-    ```> delete_todo_arn: ARN of the Lambda function for deleting a to-do
+    > api_description: Description of the API Gateway
+    > get_todos_arn: ARN of the Lambda function for getting to-do
+    > add_todo_arn: ARN of the Lambda function for adding a to-do
+    > update_todo_arn: ARN of the Lambda function for updating a to-do
+    > delete_todo_arn: ARN of the Lambda function for deleting a to-do
 
 
 - b.	Output variables
     ```> api_id: ID of the API Gateway REST API
-    ```> root_resource_id: Resource ID of the API's root
-    ```> execution_arn: Execution ARN part of the API Gateway stage
-    ```> invoke_url: URL to invoke the API pointing to the stage
+    > root_resource_id: Resource ID of the API's root
+    > execution_arn: Execution ARN part of the API Gateway stage
+    > invoke_url: URL to invoke the API pointing to the stage
 - c.	Using api_gateway module in project-directory/main.tf
 
 ```sh 
