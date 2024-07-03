@@ -111,8 +111,7 @@ This project is a simple Node.js application to provide a simple API for managin
             }
         }
 2.	**Module – api_gateway**
-API Overview
-Resources
+
 Todos Resource
 -	Path: /todos
     -	Methods:
@@ -143,17 +142,55 @@ Todo Resource
     > execution_arn: Execution ARN part of the API Gateway stage
     > invoke_url: URL to invoke the API pointing to the stage
     
-### c. Using api_gateway module in project-directory/main.tf
+- c. Using api_gateway module in project-directory/main.tf
 
-```hcl
-module "api_gateway" {
-  source           = "Path to module"
-  api_name         = "Api Name goes here"
-  api_description  = "description goes here"
-  get_todos_arn    = "specify arn here"
-  add_todo_arn     = "specify arn here"
-  update_todo_arn  = "specify arn here"
-  delete_todo_arn  = "specify arn here"
+    ```hcl
+    module "api_gateway" {
+      source           = "Path to module"
+      api_name         = "Api Name goes here"
+      api_description  = "description goes here"
+      get_todos_arn    = "specify arn here"
+      add_todo_arn     = "specify arn here"
+      update_todo_arn  = "specify arn here"
+      delete_todo_arn  = "specify arn here"
+    }
+
+3.	**Module – S3**
+This module defines the s3 bucket and file upload to the bucket
+- a.	Input variables
+
+    ```> bucket_name: Name of the S3 bucket
+    > file_key: Key of the file in S3 bucket
+    > file_source: Source path of the file to upload
+- b.	Output variables
+
+    ```> bucket_id: ID of the created S3 bucket
+    > bucket_arn: ARN of the created S3 bucket
+    > file_key: Key of the uploaded file
+
+c.	Using s3 module in project-directory/main.tf
+
+    ```hcl
+        module "api_gateway" {
+        source           = "Path to module"
+        api_name         = "Api Name goes here"
+        api_description  = "description goes here"
+        get_todos_arn    = "specify arn here"
+        add_todo_arn     = "specify arn here"
+        update_todo_arn  = "specify arn here"
+        delete_todo_arn  = "specify arn here"
+        }
+
+4.	Module – iam
+a.	Input variables
+s3_bucket_arn: ARN of the S3 bucket
+b.	Output variables
+lambda_role_arn: ARN of the IAM role for Lambda
+c.	Usage
+
+module "iam" {
+  source        = "Path to module"
+  s3_bucket_arn = //specify arn of bucket
 }
 
 
