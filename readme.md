@@ -93,8 +93,8 @@ This project is a simple Node.js application to provide a simple API for managin
     > environment_variables: - Environment variables for the Lambda function
 
 - b.	Output Variables
-        lambda_function_name: - Name of the Lambda function
-        lambda_invoke_arn: - Invocation ARN of the Lambda function
+    ```> lambda_function_name: - Name of the Lambda function
+    > lambda_invoke_arn: - Invocation ARN of the Lambda function
 
 - c.	Using lambda module in project-directory/main.tf
     ```sh
