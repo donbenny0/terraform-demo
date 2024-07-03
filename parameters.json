@@ -1,0 +1,28 @@
+{
+    "parameters": [
+      {
+        "name": "/myapp/database/url",
+        "type": "String",
+        "value": "db.example.com",
+        "description": "Database URL for MyApp"
+      },
+      {
+        "name": "/myapp/database/port",
+        "type": "String",
+        "value": "5432",
+        "description": "Database port for MyApp"
+      },
+      {
+        "name": "/myapp/api/key",
+        "type": "SecureString",
+        "value": "super-secret-api-key",
+        "description": "API key for MyApp"
+      },
+      {
+        "name": "/myapp/feature_flags",
+        "type": "StringList",
+        "value": "flag1,flag2,flag3",
+        "description": "Feature flags for MyApp"
+      }
+    ]
+  }

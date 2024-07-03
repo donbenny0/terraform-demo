@@ -1,0 +1,53 @@
+[
+    {
+      "id": "1",
+      "task": "Buy groceries",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "task": "Read a book",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "task": "Clean the house",
+      "completed": true
+    },
+    {
+      "id": "4",
+      "task": "Workout for an hour",
+      "completed": false
+    },
+    {
+      "id": "5",
+      "task": "Prepare dinner",
+      "completed": false
+    },
+    {
+      "id": "6",
+      "task": "Call a friend",
+      "completed": true
+    },
+    {
+      "id": "7",
+      "task": "Pay bills",
+      "completed": false
+    },
+    {
+      "id": "8",
+      "task": "Write a blog post",
+      "completed": false
+    },
+    {
+      "id": "9",
+      "task": "Plan a trip",
+      "completed": true
+    },
+    {
+      "id": "10",
+      "task": "Attend a meeting",
+      "completed": false
+    }
+  ]
+  
