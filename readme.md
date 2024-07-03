@@ -183,9 +183,9 @@ c.	Using s3 module in project-directory/main.tf
 
 4.	**Module – iam**
 - a.	Input variables
-    ```> s3_bucket_arn: ARN of the S3 bucket
+    ```s3_bucket_arn: ARN of the S3 bucket
 - b.	Output variables
-    ```> lambda_role_arn: ARN of the IAM role for Lambda
+    ```lambda_role_arn: ARN of the IAM role for Lambda
 - c.	Usage
 
     ```hcl
@@ -193,4 +193,60 @@ c.	Using s3 module in project-directory/main.tf
           source        = "Path to module"
           s3_bucket_arn = //specify arn of bucket
         }
+
+## Configuring Source code
+
+- 1.	project-destination/src/dto/dto.ts
+
+    - a.	Creating new dto structure
+        ```hcl
+            export interface New_dto{
+
+                    // Define the structure
+            }
+- 2.	project-destination/src/conreoller/todoController.ts
+
+    - a.	Creating new controller
+        ```hcl
+        import { TodoService } from '../service/service';
+        import { Todo } from '../dto/todoModel';
+        //Specify other imports here
+
+        //Extend the service class
+        const todoService = new TodoService();
+
+        //specify your new controller here
+        export const deleteTodo = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
+            try {
+        //your statemets 
+                  }
+        catch(expression){
+        	//Your catch statements
+        }
+ 
+- 3.	project-destination/src/service/service.ts
+    - a.	Creating new service
+        ```hcl
+            import { S3Client, GetObjectCommand, PutObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
+            import { Todo } from '../dto/todoModel';
+            // Specify other imports here
+            export class TodoService {
+                // create private variables here
+                    // create private variables here
+                constructor() {
+            //Add initilaization here
+                }
+                // Helper method to get the current list of Todos
+                private async getTodos(): Promise<Todo[]> {
+            	//Write todo logic here
+                }
+                }
+            // Write more methods
+                public async createTodo(todo: Todo): Promise<void> {
+            //access todo here
+                }
+        }
+## Cleaning Up
+    - To remove all deployed resources, navigate to the terraform directory and run:
     
+    ```terraform destroy
