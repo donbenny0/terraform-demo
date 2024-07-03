@@ -1,8 +1,8 @@
-TO-DO Application
+###TO-DO Application
 
-Project Documentation
+##Project Documentation
 
-Project Overview
+**Project Overview**
 
 This project is a simple Node.js application to provide a simple API for managing to-do items. It also includes infrastructure as code (IaC) using Terraform to deploy resources such as API Gateway, IAM roles, Lambda functions, S3 buckets, and SSM parameters.
 
