@@ -183,9 +183,11 @@ c.	Using s3 module in project-directory/main.tf
 
 4.	**Module – iam**
 - a.	Input variables
-    ```s3_bucket_arn: ARN of the S3 bucket
+
+        ```s3_bucket_arn: ARN of the S3 bucket
 - b.	Output variables
-    ```lambda_role_arn: ARN of the IAM role for Lambda
+
+        ```lambda_role_arn: ARN of the IAM role for Lambda
 - c.	Usage
 
     ```hcl
