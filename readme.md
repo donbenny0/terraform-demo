@@ -142,17 +142,18 @@ Todo Resource
     > root_resource_id: Resource ID of the API's root
     > execution_arn: Execution ARN part of the API Gateway stage
     > invoke_url: URL to invoke the API pointing to the stage
-- c.	Using api_gateway module in project-directory/main.tf
+    
+### c. Using api_gateway module in project-directory/main.tf
 
-```sh 
-    module "api_gateway" {
-        source           = "Path to module"
-        api_name         = "Api Name goes here"
-        api_description  = "description goes here"
-        get_todos_arn    = //specify arn here
-        add_todo_arn     = //specify arn here
-        update_todo_arn  = //specify arn here
-        delete_todo_arn  = //specify arn here
-    }
+```hcl
+module "api_gateway" {
+  source           = "Path to module"
+  api_name         = "Api Name goes here"
+  api_description  = "description goes here"
+  get_todos_arn    = "specify arn here"
+  add_todo_arn     = "specify arn here"
+  update_todo_arn  = "specify arn here"
+  delete_todo_arn  = "specify arn here"
+}
 
 
