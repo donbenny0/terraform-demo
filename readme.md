@@ -32,6 +32,12 @@ This project is a simple Node.js application to provide a simple API for managin
     ```sh
     npm build
 
+### Deploying Infrastructure
+1.	Apply the Terraform configuration:
+
+   ```sh
+    terraform apply
+
 
 ## Directory and File Descriptions
 
