@@ -97,6 +97,7 @@ This project is a simple Node.js application to provide a simple API for managin
     > lambda_invoke_arn: - Invocation ARN of the Lambda function
 
 - c.	Using lambda module in project-directory/main.tf
+  
     ```sh
             module "lambda" {
             source = "./modules/lambda"
@@ -109,5 +110,25 @@ This project is a simple Node.js application to provide a simple API for managin
                 "KEY2" = "value2"
             }
         }
+2.	**Module – api_gateway**
+API Overview
+Resources
+Todos Resource
+-	Path: /todos
+    -	Methods:
+        -	GET
+            -	Integration: AWS Lambda Function (var.get_todos_arn)
+        -	POST
+            -	Integration: AWS Lambda Function (var.add_todo_arn)
+Todo Resource
+-	Path: /todos/{id}
+    -	Methods:
+        -	PUT
+            -	Integration: AWS Lambda Function (var.update_todo_arn)
+        -	DELETE
+            -	Integration: AWS Lambda Function (var.delete_todo_arn)
+
+- a.	Input variables
+    ```> api_name: Name of the API Gateway
 
 
