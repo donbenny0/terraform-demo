@@ -86,7 +86,7 @@ This project is a simple Node.js application to provide a simple API for managin
     -	Deploying the Lambda function: Uploading the .zip file to AWS Lambda.
 
 - a.	Input Variables
-    > function_name: - Name of the Lambda function
+    ```> function_name: - Name of the Lambda function
     > lambda_role_arn: - ARN of the IAM role for Lambda
     > handler: - Handler for the Lambda function
     > runtime: - Runtime for the Lambda function
