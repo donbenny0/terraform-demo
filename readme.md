@@ -33,8 +33,9 @@ This project is a simple Node.js application to provide a simple API for managin
 1.	Apply the Terraform configuration:
    ```sh
     terraform apply
-    ```
-## Directory and File Descriptions
+
+### Deploying Infrastructure
+1.	Apply the Terraform configuration:
 
 1.	**project-directory/dist/**: The npm build command will compile the TypeScript code and create the dist/ directory along with the compiled JavaScript code.
     -	dist/controllers/todoController.js: This is a controller file which contains multiple controller functions.
