@@ -130,5 +130,12 @@ Todo Resource
 
 - a.	Input variables
     ```> api_name: Name of the API Gateway
+    ```> api_description: Description of the API Gateway
+    ```> get_todos_arn: ARN of the Lambda function for getting to-do
+    ```> add_todo_arn: ARN of the Lambda function for adding a to-do
+    ```> update_todo_arn: ARN of the Lambda function for updating a to-do
+    ```> delete_todo_arn: ARN of the Lambda function for deleting a to-do
+
+
 
 
